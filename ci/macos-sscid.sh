@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set +euxo pipefail
 
 printf "Running from macOS via SSCID"
 
