@@ -34,7 +34,7 @@ def main():
         "pex", "dist/sshuttle-{}.tar.gz".format(version), "-o", dest,
         "--python-shebang=/usr/bin/env python3", "-c", "sshuttle"
     ],
-               cwd=tempdir)
+               cwd=tempdir, env=os.environ.copy())
 
 
 if __name__ == '__main__':
