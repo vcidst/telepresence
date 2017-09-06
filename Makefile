@@ -18,7 +18,10 @@ virtualenv:
 	virtualenv/bin/pip install -r k8s-proxy/requirements.txt
 
 virtualenv/bin/sshuttle-telepresence: virtualenv
-	source virtualenv/bin/activate && packaging/build-sshuttle.py
+	( \
+	  source virtualenv/bin/activate \
+	  packaging/build-sshuttle.py \
+	)
 
 setup: virtualenv/bin/sshuttle-telepresence
 

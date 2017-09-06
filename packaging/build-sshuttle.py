@@ -31,7 +31,7 @@ def main():
     )
     print(dest)
     check_call([
-        "pex", "dist/sshuttle-{}.tar.gz".format(version), "-o", dest,
+        os.path.abspath(os.getcwd()), "virtualenv", "bin", "dist/sshuttle-{}.tar.gz".format(version), "-o", dest,
         "--python-shebang=/usr/bin/env python3", "-c", "sshuttle"
     ],
                cwd=tempdir, env=os.environ.copy())
