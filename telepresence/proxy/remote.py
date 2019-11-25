@@ -76,8 +76,7 @@ def get_deployment_json(
             "get",
             deployment_type,
             "-o",
-            "json",
-            "--export",
+            "json"
         ]
         if run_id is None:
             return json.loads(
